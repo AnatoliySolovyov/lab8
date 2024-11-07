@@ -68,12 +68,18 @@ function TaskList({ tasks, deleteTask, toggleCompletion }) {
           <div>
             <span
               onClick={() => toggleCompletion(task.id)}
-              style={{ textDecoration: task.completed ? 'line-through' : 'none' }}
+              style={{
+                textDecoration: task.completed ? 'line-through' : 'none',
+                cursor: 'pointer',
+              }}
             >
               <strong>{task.title}</strong>
             </span>
             <p>{task.description}</p>
           </div>
+          <button onClick={() => toggleCompletion(task.id)}>
+            {task.completed ? 'Позначити як не виконане' : 'Позначити як виконане'}
+          </button>
           <button onClick={() => deleteTask(task.id)}>Видалити</button>
         </li>
       ))}
