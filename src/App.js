@@ -18,8 +18,8 @@ function App() {
         completed: false
       };
       setTasks([...tasks, newTask]);
-      setTaskTitle(''); // Очистити поле заголовка
-      setTaskDescription(''); // Очистити поле опису
+      setTaskTitle('');
+      setTaskDescription('');
     }
   };
 
